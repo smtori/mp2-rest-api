@@ -7,9 +7,8 @@ class HealthResponse(BaseModel):
 
 
 class DatasetInfo(BaseModel):
-    id: int
+    dataset_id: int
     filename: str
     rows: int
     columns: int
     column_names: (list[str])
-    pass
