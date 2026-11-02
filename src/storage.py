@@ -55,11 +55,11 @@ class DatasetStorage:
     def update(self, dataset_id, df):
         """Replace an existing dataset; return True, or False if missing."""
         if dataset_id not in self._store:
-            logger.debug("Update failed: dataset ID {dataset_id} not found")
+            logger.debug(f"Update failed: dataset ID {dataset_id} not found")
             return False
 
         self._store[dataset_id]["df"] = df.copy()
-        logger.debug("Updated dataset ID {dataset_id}")
+        logger.debug(f"Updated dataset ID {dataset_id}")
         return True
 
     def clear(self):
